@@ -1,0 +1,13 @@
+Napisać program wyznaczający w sposób rekurencyjny wartość funkcji określonej wzorem:
+			
+			{ m + 1 									dla n = 0;
+			{ m										    dla n = 1;
+f(n,m) =	{ m + 3										dla n = 2;
+			{ f(n-1,m) - f(n-2,m+1) + (2 * f(n-3,m))	w pozostałych przypadkach.
+			
+Program powinien pobierać argument z linii polecenia i wyprowadzać wynik na standardowe wyjście. Wewnątrz procedury wołanej rekurencyjnie nie mogą być używane zmienne globalne.
+
+(1) Pierwszy argument przekazywany przez rejestr EAX, pozostałe argumenty przekazywane przez stos.
+(2) Wynik zwracany przez rejestr EDX.
+(3) Za uporządkowanie stosu odpowiada wywoływana funkcja.
+(4) Wywoływana funkcja musi zachować wszystkie rejestry (oprócz rejestru, w którym zwracany jest wynik).
